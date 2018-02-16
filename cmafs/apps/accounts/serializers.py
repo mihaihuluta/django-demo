@@ -1,6 +1,5 @@
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
-from django_countries.serializer_fields import CountryField
 
 from rest_framework import serializers, exceptions
 
@@ -10,11 +9,10 @@ User = get_user_model()
 class AccountSerializer(serializers.ModelSerializer):
     username = serializers.SlugField(required=False)
     password = serializers.CharField(write_only=True, required=False)
-    country = CountryField()
-
+    
     class Meta:
         model = User
-        fields = ('username', 'email', 'password', 'first_name', 'last_name', 'country')
+        fields = ('username', 'email', 'password', 'first_name', 'last_name')
 
     def validate_email(self, value):
         email = value.lower()
@@ -64,8 +62,7 @@ class RegisterSerializer(AccountSerializer):
 
 class ProfileSerializer(AccountSerializer):
     email = serializers.EmailField(required=False)
-    country = CountryField(required=False)
-
+    
     class Meta:
         model = User
         fields = (
@@ -73,6 +70,5 @@ class ProfileSerializer(AccountSerializer):
             'email',
             'first_name',
             'last_name',
-            'country',
             'about_me',
         )
