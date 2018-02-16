@@ -21,13 +21,13 @@ from rest_framework_jwt.views import obtain_jwt_token
 
 from apps.reviews import views
 from apps.accounts import urls as accounts_urls
+from apps.reviews import urls as reviews_urls
 
 
 router = routers.DefaultRouter()
-# router.register(r'users', views.UserViewSet)
-# router.register(r'groups', views.GroupViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^api/accounts/', include(accounts_urls)),
+    url(r'^api/reviews/', include(reviews_urls)),
 ]
