@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'cmafs.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cmafs.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
