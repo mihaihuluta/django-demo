@@ -1,0 +1,18 @@
+[
+    {
+        "model": "reviews.Company",
+        "pk": 1,
+        "fields": {
+            "name": "Company_1",
+            "description": "Company_1_Descriptions"
+        }
+    },
+    {
+        "model": "reviews.Company",
+        "pk": 2,
+        "fields": {
+            "name": "Company_2",
+            "description": "Company_2_Descriptions"
+        }
+    }
+]
