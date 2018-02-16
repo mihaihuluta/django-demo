@@ -1,14 +1,27 @@
-from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 
+from apps.reviews.models import Review
 
-# class UserSerializer(serializers.HyperlinkedModelSerializer):
-#     class Meta:
-#         model = User
-#         fields = ('url', 'username', 'email', 'groups')
+class ReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = (
+            'title', 'summary', 'ip_address', 'submission_date', 'user',
+            'company', 'rating'
+        )
+        read_only_fields = ('user', 'submission_date')
 
+    def save(self, **kwargs):
+        instance = super().save(**kwargs)
+        return instance
 
-# class GroupSerializer(serializers.HyperlinkedModelSerializer):
-#     class Meta:
-#         model = Group
-#         fields = ('url', 'name')
+class CompanySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = (
+            'name', 'description'
+        )
+
+    def save(self, **kwargs):
+        instance = super().save(**kwargs)
+        return instance
