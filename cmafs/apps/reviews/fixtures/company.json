@@ -14,5 +14,13 @@
             "name": "Company_2",
             "description": "Company_2_Descriptions"
         }
+    },
+    {
+        "model": "reviews.Company",
+        "pk": 3,
+        "fields": {
+            "name": "Company_3",
+            "description": "Company_3_Descriptions"
+        }
     }
 ]
