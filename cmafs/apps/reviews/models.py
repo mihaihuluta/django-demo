@@ -1,13 +1,16 @@
+from datetime import datetime
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
-from datetime import datetime
 
-from apps.accounts.models import User
+from ..accounts.models import User
 
 
 class Company(models.Model):
     name = models.CharField(max_length=120)
     description = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
 
 
 class Review(models.Model):
