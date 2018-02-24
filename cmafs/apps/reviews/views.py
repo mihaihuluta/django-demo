@@ -1,7 +1,5 @@
-from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticatedOrReadOnly, AllowAny, \
-    IsAuthenticated, SAFE_METHODS
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from .serializers import ReviewSerializer
 from .models import Review
