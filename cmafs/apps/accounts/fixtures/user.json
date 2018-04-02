@@ -1,0 +1,35 @@
+[
+    {
+        "model": "accounts.User",
+        "pk": 1,
+        "fields": {
+            "username": "test_user_1",
+            "email": "test_user_1@demo.com",
+            "password": "pbkdf2_sha256$100000$09Xmnl8b8k5E$zL1MlTtuFQgnqoO3wgGAslIXxUwhfO6V14zPZRI3C8I=",
+            "first_name": "test_user_1_first_name",
+            "last_name": "test_user_1_last_name"
+        }
+    },
+    {
+        "model": "accounts.User",
+        "pk": 2,
+        "fields": {
+            "username": "test_user_2",
+            "email": "test_user_2@demo.com",
+            "password": "pbkdf2_sha256$100000$09Xmnl8b8k5E$zL1MlTtuFQgnqoO3wgGAslIXxUwhfO6V14zPZRI3C8I=",
+            "first_name": "test_user_2_first_name",
+            "last_name": "test_user_2_last_name"
+        }
+    },
+    {
+        "model": "accounts.User",
+        "pk": 3,
+        "fields": {
+            "username": "test_user_3",
+            "email": "test_user_3@demo.com",
+            "password": "pbkdf2_sha256$100000$09Xmnl8b8k5E$zL1MlTtuFQgnqoO3wgGAslIXxUwhfO6V14zPZRI3C8I=",
+            "first_name": "test_user_3_first_name",
+            "last_name": "test_user_3_last_name"
+        }
+    }
+]
